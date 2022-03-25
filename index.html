@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>svgScaler - Quick SVG Resizer</title>
-	<meta name="description" content="Small Lightweight Tool scratched in Pure JavaScript to Quickly Resize and Convert SVG to PNG">
-	<link rel="stylesheet" type="text/css" href="assets/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta property="og:title" content="svgScaler - Quick SVG Resizer">
-	<meta property="og:description" content="Small Lightweight Tool scratched in Pure JavaScript to Quickly Resize and Convert SVG to PNG">
-	<meta property="og:url" content="https://jeffylo94.github.io/myscale/">
-	
-<!-- 	<script>
+
+  <head>
+    <title>svgScaler - Quick SVG Resizer</title>
+    <meta name="description" content="Small Lightweight Tool scratched in Pure JavaScript to Quickly Resize and Convert SVG to PNG">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="svgScaler - Quick SVG Resizer">
+    <meta property="og:description" content="Small Lightweight Tool scratched in Pure JavaScript to Quickly Resize and Convert SVG to PNG">
+    <meta property="og:url" content="https://jeffylo94.github.io/myscale/">
+
+    <!-- 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -20,41 +21,58 @@
 	  ga('send', 'pageview');
 
 	</script> -->
-</head>
-<body>
-	<!--Logo-->
-	<h1>svgScaler</h1>
-	<h2>Quick SVG Resizer </h2>
-	<!--//Logo-->
-	<p class="promote">
-		<a href="https://github.com/jeffylo94/myscale" target="_blank">Fork at GitHub</a>
-	</p>
-	<!--File Upload-->
-	<div class="btn-wrapper">
-		<label class="btn" for="file_upload">Upload SVG</label>
-		<input type="file" id="file_upload" accept=".svg">
-	</div>
-	<!--//File Upload-->
+  </head>
+
+  <body>
+    <!--Logo-->
+    <h1>svgScaler</h1>
+    <h2>Quick SVG Resizer </h2>
+    <!--//Logo-->
+    <p class="promote">
+      <a href="https://github.com/jeffylo94/myscale" target="_blank">Fork at GitHub</a>
+    </p>
+    <!--File Upload-->
+    <div class="btn-wrapper">
+      <label class="btn" for="file_upload">Upload SVG</label>
+      <input type="file" id="file_upload" accept=".svg">
+    </div>
+    <!--//File Upload-->
 
 
-	<!--Uploaded SVG Preview-->
-	<div class="preview" id="svg_preview"></div>
-	<!--//Uploaded SVG Preview-->
-	<form id="svg_form">
-		<input type="number" id="resize_width_value" required placeholder="Enter Width Value">
-		X
-		<input type="number" id="resize_height_value" required placeholder="Enter Height Value">
-		<button type="button" onclick="playGround();exportResizedSvg();">Generate</button>
-	</form>
-	<div class="download-wrapper" id="download_wrapper">
-	<a href="data:" id="data" download="svg" class="download-png" target="_blank">Download PNG</a>
-	</div>
-	<img src="" id="fromcanvas">
-	<div class="credits">
-		<p>Crafted with <span>&#10084;</span> at <a href="https://www.linkedin.com/in/peter-lo-6790016/" target="_blank">Omnigarde Apps</a></p>
-		<p>Based on myScale from <a href="http://design.webkul.com" target="_blank">Webkul UXlab</a></p>
-	</div>
-	<script src="assets/svg_todataurl.js"></script>
-	<script src="assets/script.js"></script>
-</body>
+    <!--Uploaded SVG Preview-->
+    <div class="preview" id="svg_preview"></div>
+    <!--//Uploaded SVG Details-->
+    <div class="details" id="svg_details">
+      <div class="width">
+        <p class="detail_label">
+          W:
+        </p>
+        <p id="detail_width"></p>
+      </div>
+      <div class="height">
+        <p class="detail_label">
+          H:
+        </p>
+        <p id="detail_height"></p>
+      </div>
+    </div>
+    <!--//Uploaded SVG Preview-->
+    <form id="svg_form">
+      <input type="number" id="resize_width_value" required placeholder="Enter Width Value">
+      X
+      <input type="number" id="resize_height_value" required placeholder="Enter Height Value">
+      <button type="button" onclick="playGround();exportResizedSvg();">Generate</button>
+    </form>
+    <div class="download-wrapper" id="download_wrapper">
+      <a href="data:" id="data" download="svg" class="download-png" target="_blank">Download PNG</a>
+    </div>
+    <img src="" id="fromcanvas">
+    <div class="credits">
+      <p>Crafted with <span>&#10084;</span> at <a href="https://www.linkedin.com/in/peter-lo-6790016/" target="_blank">Omnigarde Apps</a></p>
+      <p>Based on myScale from <a href="http://design.webkul.com" target="_blank">Webkul UXlab</a></p>
+    </div>
+    <script src="assets/svg_todataurl.js"></script>
+    <script src="assets/script.js"></script>
+  </body>
+
 </html>
