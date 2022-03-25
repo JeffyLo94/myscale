@@ -10,12 +10,13 @@ fileUpload.addEventListener("change", function(){
 });
 
 var playGround = function(){
-	var resizeValue = document.getElementById("resize_value").value;
+	var resizeWidthValue = document.getElementById("resize_width_value").value;
+	var resizeHeightValue = document.getElementById("resize_height_value").value;
 	document.getElementsByTagName("svg")[0].setAttribute("id","svg_resize");
-	document.getElementsByTagName("svg")[0].setAttribute("width", resizeValue);
-	document.getElementsByTagName("svg")[0].setAttribute("height", resizeValue);
+	document.getElementsByTagName("svg")[0].setAttribute("width", resizeWidthValue);
+	document.getElementsByTagName("svg")[0].setAttribute("height", resizeHeightValue);
 	document.getElementById("download_wrapper").style.display = "block";
-	var fileRename = "icon-" + resizeValue + "px.png";
+	var fileRename = "icon-" + resizeWidthValue + "x" + resizeHeightValue + "px.png";
 	document.getElementById("data").setAttribute("download", fileRename);
 }
 
