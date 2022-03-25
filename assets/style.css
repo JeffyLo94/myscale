@@ -71,6 +71,7 @@ input[type="file"]{
 form{
 	display: none;
 	text-align: center;
+	color: white;
 }
 form input[type="number"]{
 	padding: 10px 10px;
