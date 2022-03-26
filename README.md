@@ -4,8 +4,8 @@ A *Small Lightweight Tool* scratched in Pure JavaScript and modified from [Webku
 
 Made to assist with transforming SVG vector graphics to scaled png images for mobile app dev.
 
-# Where Can I Find the Tool?
-[Right Here](http://jeffylo94.github.io/svgscale)
+# Where Can Use the Tool?
+[svgScale on Github IO](https://jeffylo94.github.io/svgScale/)
 
 # TODO
 - Add x0.5, x2, x3 buttons for easier use to support mobile app dev asset resolution scales.
