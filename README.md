@@ -8,7 +8,6 @@ Made to assist with transforming SVG vector graphics to scaled png images for mo
 [svgScale on github.io](https://jeffylo94.github.io/svgScale/)
 
 # TODO
-- Add x0.5, x2, x3 buttons for easier use to support mobile app dev asset resolution scales.
 - Add a download all button to get all scales.
 
 # Credits
