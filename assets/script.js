@@ -1,3 +1,6 @@
+var svgWidth;
+var svgHeight;
+
 var fileUpload = document.getElementById("file_upload");
 fileUpload.addEventListener("change", function() {
   var fileSvg = fileUpload.files[0];
@@ -9,10 +12,14 @@ fileUpload.addEventListener("change", function() {
     var viewBox = doc.documentElement.viewBox.baseVal;
     document.getElementById("detail_width").innerHTML = viewBox.width;
     document.getElementById("detail_height").innerHTML = viewBox.height;
+    svgWidth = viewBox.width;
+    svgHeight = viewBox.height;
     document.getElementById("svg_details").style.display = "flex";
     document.getElementById("svg_sizing_options").style.display = "flex";
   }
 });
+
+
 
 var showCustomResizeForm = function() {
   document.getElementById("svg_form").style.display = "flex";
@@ -33,8 +40,8 @@ var hideDownloadContainer = function () {
 var playGround = function(filename='', multiplier = 1, hasCustomResize=false) {
   var resizeWidthValue = 0;
   var resizeHeightValue = 0;
-  var svgWidth = document.getElementsByTagName("svg")[0].getAttribute("width");
-  var svgHeight = document.getElementsByTagName("svg")[0].getAttribute("height");
+//   var svgWidth = document.getElementsByTagName("svg")[0].getAttribute("width");
+//   var svgHeight = document.getElementsByTagName("svg")[0].getAttribute("height");
   console.log(`orig: ${svgWidth} X ${svgHeight} ${typeof(svgWidth)}`);
 
   var w = parseInt(svgWidth)
